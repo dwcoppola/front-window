@@ -389,7 +389,9 @@ function removeChildren(parent) {
 function bringUpWorktrayOutForm() {
     const content = document.getElementById('main-content');
     removeChildren(content);
-    const form = `<h1>Work Tray Out</h1>
+    const form = `<h2>Work Tray Out</h2>
+        <p>Please fill out the form below to send work out to an employee. 
+        The page will let you know if there are any errors.</p>
         <div class="form-group">
             <label for="employee">Employee:</label>
             <select class="form-control" id="employee">
@@ -429,9 +431,7 @@ function bringUpWorktrayOutForm() {
             <input class="form-control" type="number" min="0" id="quantity" autocomplete="off"/>
         <div>
         <button class="btn btn-default" onclick="processWorkTrayOut()">Save</button>`
-
     content.innerHTML += form;
-    // Menus
     let employeeMenu = document.getElementById('employee');
     for (employee of getAllEmployees()) {
         employeeMenu.innerHTML += `<option>${employee}</option>`;
@@ -449,7 +449,9 @@ function bringUpWorktrayOutForm() {
 function bringUpWorktrayInForm() {
     const content = document.getElementById('main-content');
     removeChildren(content);
-    const form = `<h1>Work Tray In</h1>
+    const form = `<h2>Work Tray In</h2>
+        <p>Please fill out the form below to send work out to an employee. 
+        The page will let you know if there are any errors.</p>
         <div class="form-group">
             <label for="job">Job:</label>
             <select class="form-control" id="job">
@@ -465,7 +467,5 @@ function bringUpWorktrayInForm() {
             <input class="form-control" type="number" min="0" id="quantity" autocomplete="off"/>
         <div>
         <button class="btn btn-default" onclick="processWorkTrayIn()">Save</button>`
-
     content.innerHTML += form;
-    // Menus
 }

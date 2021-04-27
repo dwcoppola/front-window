@@ -1,9 +1,9 @@
 #main-content
 {
-    padding: 1em;
-    max-width: 600px;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 500px;
 }
-
 button
 {
     margin-top: 1em;
